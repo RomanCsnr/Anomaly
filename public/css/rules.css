@@ -1,0 +1,9 @@
+* {
+    background: var(--blue) !important;
+    color: var(--beige) !important;
+}
+
+.logo {
+    width: 250px;
+}
+

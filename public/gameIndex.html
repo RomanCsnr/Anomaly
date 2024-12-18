@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anomaly</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./css/boostrap-perso.css">
+    <link rel="stylesheet" href="./css/pre.css">    
+
+</head>
+<body>
+    <a href="http://anomaly.alwaysdata.net/">
+        <img class="headerLogo" src="./img/Logo-anomaly.svg" alt="">
+    </a>
+
+    <img src="./img/mascote/mascottes-01.png" class="mascot-left" alt="Mascot Left">
+    <img src="./img/mascote/mascottes-02.png" class="mascot-right" alt="Mascot Right">
+
+
+<section id="game">
+    <div id="setup">
+        <form id="playerForm">
+            <h1>Enter the number of player</h1>
+            <p style="margin-top: -55px;">(minimum 4 players)</p>
+            <div class="btnPlayerForm">
+                <button type="button" onclick="addPlayer()" class="gameBtn-secondary">Add Player</button>
+                <button type="submit" class="gameBtn">Start Game</button>
+            </div>
+            
+            <div class="input">
+                <input type="text" placeholder="Player 1" required>
+                <input type="text" placeholder="Player 2" required>
+                <input type="text" placeholder="Player 3" required>
+                <input type="text" placeholder="Player 4" required>
+            </div>
+        </form>
+    </div> 
+
+    <div id="game" style="display: none;"></div>
+</section>
+<script src="js/game.js"></script> 
+</body>
+</html>

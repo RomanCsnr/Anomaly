@@ -1,0 +1,83 @@
+/* Color */
+:root {
+    --beige: #FDFFD4;
+    --blue: #004D69;
+    --orange: #FA8564;
+    /* Pastel */
+    --yellow: #EADA00;
+    --corail: #F08366;
+    --blueSky: #71C6CB;
+    --pink: #EDA0C6;
+    --green: #6DB864;
+    --cream: #FAF8D5;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Hobeaux Condensed';
+    src: url('../fonts/HobeauxBold.woff2') format('woff2'),
+    url('../fonts/HobeauxBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PtSansCaption Bold';
+    url('../fonts/PTSansCaption-Bold.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'PtSansCaption Regular';
+url('../fonts/PTSansCaption-Regular.ttf') format('ttf');
+}
+
+body {
+    font-family: 'PtSansCaption Regular', sans-serif;
+}
+
+h1, h2   {
+    font-family: 'Hobeaux Condensed', sans-serif;
+    margin: 0;
+}
+
+/* Fonts Size */
+:root {
+    --font-size-base: 16px;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --font-size-base: 18px; /* Augmente la base pour les écrans plus grands */
+    }
+}
+
+:root {
+    --font-size-h1: calc(var(--font-size-base) * 2.618);
+    --font-size-h2: calc(var(--font-size-base) * 1.618);
+    --font-size-h3: calc(var(--font-size-base) * 1.272);
+    --font-size-h4: var(--font-size-base);
+    --font-size-h5: calc(var(--font-size-base) / 1.618);
+    --font-size-h6: calc(var(--font-size-base) / 2.618);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+h5 {
+    font-size: var(--font-size-h5);
+}
+
+h6 {
+    font-size: var(--font-size-h6);
+}

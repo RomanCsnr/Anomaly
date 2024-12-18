@@ -1,0 +1,594 @@
+* {
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+/* Style de base pour le projet */
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+.nav {
+    position: fixed;
+    background: transparent;
+    padding: 20px 20px;
+    text-align: end;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+}
+
+#first-block {
+    background: var(--blue);
+    color: var(--beige);
+    text-align: center;
+    height: 100vh;
+}
+
+.logo {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    z-index: 1000;
+}
+
+#second-block {
+    background: var(--beige);
+    color: var(--blue);
+}
+
+#third-block {
+    background: var(--blueSky);
+    color: var(--beige);
+
+}
+
+#fourth-block {
+    background: var(--beige);
+    color: var(--blue);
+}
+
+.fourth-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer {
+    padding: 10px 20px;
+    background: var(--blue);
+    color: var(--beige);
+}
+
+/* Spécifique */
+a.btn {
+    font-family: "Hobeaux Condensed";
+    font-size: var(--font-size-h2);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+a.btn-primary {
+    background: var(--orange);
+    color: white;
+    margin-top: 5%;
+    transition: transform 0.3s ease; 
+    z-index: 10000;
+}
+
+a.btn-secondary {
+    background: var(--blue);
+    color: white;
+    border: none;
+}
+
+a.btn-third {
+    background: var(--beige);
+    color: var(--blue);
+    border: none;
+}
+
+.svg-button {
+    width: 250px;
+    height: fit-content;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.svg-button:hover {
+    transform: scale(1.05);
+}
+
+.svg-button:hover text {
+    transition: fill 0.3s ease;
+}
+
+.svg-button:hover #morphPath {
+    animation: morph 1s ease-in-out infinite alternate;
+}
+
+/*a.btn:hover {*/
+/*    background-color: #0056b3;*/
+/*}*/
+
+input, textarea {
+    background: transparent;
+    border: 2px solid var(--beige);
+    color: var(--beige);
+    padding: 15px;
+    width: 100%;
+}
+
+.img-container {
+    max-height: 100%; /* Image ne dépasse pas la hauteur */
+    max-width: 100%; /* Image ne dépasse pas la largeur */
+    object-fit: cover; /* Coupe ou ajuste pour couvrir tout le conteneur */
+}
+
+/* Wave */
+.wave {
+    position: relative;
+    width: 100%;
+    height: auto;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.wave svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* Conteneur pour le SVG */
+.svg-container {
+    position: relative;
+    display: inline-block;
+    margin-top: -55px;
+    margin-right: 500px;
+}
+
+/* Bouton SVG */
+.svg-button {
+    width: 250px;
+    height: fit-content;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Centrage du texte dans le SVG */
+.svg-button text {
+    pointer-events: none; /* Pour éviter de bloquer le clic */
+}
+
+.svg-button:hover #morphPath {
+    animation: morph 1s ease-in-out infinite alternate;
+}
+
+@keyframes morph {
+    0% {
+        d: path("M141.26 2.92293C164.071 -3.36393 190.296 3.20671 211.854 14.7741C233.546 26.1674 250.614 42.8651 278.23 62.4025C305.846 81.9399 344.359 104.584 358.043 137.225C371.861 169.691 361.025 212.287 333.345 233.929C305.49 255.438 261.099 255.952 224.483 256.07C187.693 256.055 158.504 255.51 122.796 253.004C87.0874 250.498 44.7257 246.206 21.4956 223.117C-1.73442 200.029 -5.61825 158.586 7.34315 126.199C20.3045 93.8118 50.2853 70.6147 74.7544 49.5513C99.3572 28.3137 118.448 9.2098 141.26 2.92293Z");
+    }
+    100% {
+        d: path("M141.26 5C170 0 200 10 220 20C240 30 260 50 290 70C320 90 350 120 360 140C370 160 360 200 330 220C300 240 260 250 220 250C180 250 150 245 120 240C90 235 50 230 20 200C-10 170 -5 140 10 110C25 80 50 60 70 40C90 20 110 10 141.26 5Z");
+    }
+}
+
+img.headerLogo{
+    position: absolute;
+    width: 20%;
+    padding: 20px;
+}
+
+.mascot-left,
+.mascot-right {
+    position: absolute;
+    z-index: 0; 
+}
+
+.mascot-left {
+    top: 40%;    
+    left: 5%;
+    width: 20vw;     
+    transform: translateX(-20%);  
+}
+
+.mascot-right {
+    top: 50%;     
+    right: 10%;
+    width: 25vw;        
+    transform: translateX(10%) scale(1.1);       
+}
+
+
+.effect {
+    position: absolute;
+    z-index: 0; 
+    width: 20%;
+}
+
+.one{
+    top: 80%;
+    right: 90%;
+    width: 20%;
+
+}
+
+.two{
+    top: 80%;
+    right: -7%;    
+    width: 10%;
+}
+
+.three{
+    top: 30%;
+    right: 95%;
+    width: 8%;
+}
+
+.four{
+    top: 10%;
+    left: 90%;
+    width: 13%;
+}
+
+#game svg{
+    width: 100%;
+    z-index: 10000;
+}
+
+#game h1{
+    color: var(--beige);
+}
+
+#game h3{
+    color: var(--beige);
+    font-size: medium;
+}
+
+#game p{
+    color: var(--beige);
+}
+
+
+
+button.gameBtn{
+    font-family: "Hobeaux Condensed";
+    font-size: var(--font-size-h3);
+    background-color: var(--orange);
+    color: var(--beige);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button.gameBtn-secondary{
+    font-family: "Hobeaux Condensed";
+    font-size: var(--font-size-h3);
+    background-color: var(--beige);
+    color: var(--orange);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#game{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--blue);
+    padding: 5%;
+    z-index: 1;
+}
+
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#game #setup{
+    height: 100vh;
+    min-width: 100%;
+    max-width: 75vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+/* PLAYER FORM  */
+#game #setup #playerForm{ 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 50px;
+    justify-content: space-evenly;
+}
+
+#game #setup #playerForm p{
+    margin-top: -55px;
+}
+
+#game #setup #playerForm .btnPlayerForm{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+#game #setup #playerForm .input {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px; 
+    justify-content: center;
+}
+
+#game #setup input {
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-sizing: border-box; 
+    height: 6vh;
+    width: 30vw;
+}
+
+#game #setup input::placeholder {
+    color: var(--beige);
+}
+
+#game #setup input {
+    color: var(--beige);
+}
+
+
+#game #setup textarea:focus {
+    color: var(--beige);
+}
+
+
+/* PLAYER TURN */
+#game #setup #playerTurn{ 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 50px;
+    justify-content: space-evenly;
+}
+
+#game #setup #playerTurn #wordGroup{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#game #setup #playerTurn #wordDisplay{
+    display: flex;
+    justify-content: center;
+}
+
+#game #setup #orderPlayer{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 50px;
+    justify-content: space-evenly;
+}
+
+.card-player {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: 240px;
+    border-radius: 10px;
+}
+
+.turn {
+    position: absolute;
+    top: -15px; 
+    right: -15px; 
+    width: 45px;
+    height:45px;
+    background-color: var(--beige);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+
+
+.img {
+    width: 100%;
+    height: 150px;
+    border: solid 3px var(--beige);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: top;
+    transform: scale(1.25) translateY(10px);
+
+}
+
+.card-player h2 {
+    margin-top: 0px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--beige);
+}
+
+#game #setup #playerEliminated{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 50px;
+    justify-content: space-evenly;
+}
+
+#anomalyForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#game #setup #selectPlayerToKill{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 50px;
+    justify-content: space-evenly;
+}
+
+#selectPlayerToKill .card-player {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#selectPlayerToKill .card-player:not(.selected) {
+    opacity: 0.3;
+}
+
+#selectPlayerToKill .card-player:hover {
+    opacity: 1;
+}
+
+#selectPlayerToKill .card-player.selected {
+    opacity: 1;
+}
+
+button.gameBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+button.gameBtn-secondary:hover {
+    background-color: #fff2cc; 
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+button.gameBtn:active,
+button.gameBtn-secondary:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.2);
+}
+
+#selectPlayerToKill .card-player:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s;
+}
+
+#winAnomaly {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: 80vh; 
+}
+
+#winAnomaly h1.winTitle{
+    font-size: 100px;
+    position: relative;
+}
+
+#winAnomaly h2.winTitle{
+    position: absolute; 
+    margin-top: -2rem;
+    margin-left: 30rem;
+    color: var(--orange);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--blue);
+    font-size: 50px;
+}
+
+.winBtn{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    img.headerLogo{
+        width: 30%;
+    }
+    .mascot-left,
+    .mascot-right{
+        display: none;
+    }
+    #game #setup #playerForm h1 {
+        font-size: 1.5rem;
+    }
+
+    #winAnomaly h1.winTitle {
+        font-size: 2rem;
+    }
+
+    #winAnomaly h2.winTitle {
+        font-size: 1.2rem;
+        margin-left: 8rem;
+    }
+
+    .card-player {
+        width: 100px;
+        height: 160px;
+    }
+
+    .img {
+        height: 100px;
+    }
+
+    #game #setup input {
+        width: 80vw;
+    }
+
+    #winAnomaly h1.winTitle {
+        font-size: 10vw;     
+    }
+    #winAnomaly h2.winTitle {
+        font-size: 6vw;
+        -webkit-text-stroke-width: 0px;      
+        margin: 0;
+    }
+}
