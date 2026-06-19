@@ -1,0 +1,8 @@
+# Fichiers inutiles pour l'image Docker
+.DS_Store
+.git
+.gitignore
+README.md
+node_modules
+Dockerfile
+.dockerignore
