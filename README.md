@@ -13,3 +13,6 @@
 ## Auteur
 Créé par Roman Cuisinier
 and Julien Jouanne
+
+## API
+Le front consomme l'API NestJS du repo séparé `anomaly-api` (URL configurée dans `public/js/config.js`).
